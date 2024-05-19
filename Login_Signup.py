@@ -1,10 +1,10 @@
 def startingScreen():
     while True:
         choice = input("Do you want to log in or sign up?: ").lower()
-        if choice == "log in":
+        if choice == "log in" or "login":
             logIn()
             break
-        elif choice == "sign up":
+        elif choice == "sign up" or "signup":
             registration_list = signUp()
             print("Registration list:", registration_list)
             break
@@ -27,6 +27,7 @@ def logIn():
                 loggedIn(username)
                 return
     print("You did not enter a valid username/passcode.")
+    return logIn()
 
 
 def signUp():
